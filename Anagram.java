@@ -34,13 +34,9 @@ public class Anagram {
         String s1 = "";
         String s2 = "";
         
-        for (int i = 0; i < str1.length(); i++) {
-            if (str1.charAt(i) != ' ') s1 = s1 + str1.charAt(i);
-        }
-        
-        for (int i = 0; i < str2.length(); i++) {
-            if (str2.charAt(i) != ' ') s2 = s2 + str2.charAt(i);
-        }
+        // אין צורך בלולאות סינון נוספות כי preProcess כבר מנקה הכל
+        s1 = str1;
+        s2 = str2;
         
         if (s1.length() != s2.length()) return false;
         
@@ -62,9 +58,9 @@ public class Anagram {
             char c = str.charAt(i);
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 ans = ans + Character.toLowerCase(c);
-            } else if (c == ' ') {
-                ans = ans + c;
             }
+            // התיקון: מחקתי את ה-else if ששומר רווחים.
+            // כעת כל תו שאינו אות (כולל רווח) פשוט לא נכנס למחרוזת החדשה.
         }
         return ans;
     } 
