@@ -34,7 +34,6 @@ public class Anagram {
         String s1 = "";
         String s2 = "";
         
-        // אין צורך בלולאות סינון נוספות כי preProcess כבר מנקה הכל
         s1 = str1;
         s2 = str2;
         
@@ -59,8 +58,7 @@ public class Anagram {
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 ans = ans + Character.toLowerCase(c);
             }
-            // התיקון: מחקתי את ה-else if ששומר רווחים.
-            // כעת כל תו שאינו אות (כולל רווח) פשוט לא נכנס למחרוזת החדשה.
+
         }
         return ans;
     } 
