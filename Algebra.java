@@ -1,8 +1,4 @@
-// Implements algebraic operations and the square root function without using 
-// the Java operations a + b, a - b, a * b, a / b, a % b, and without calling 
-// Math.sqrt. All the functions in this class operate on int values and
-// return int values.
-
+//
 public class Algebra {
 	public static void main(String args[]) {
 	    int a = Integer.parseInt(args[0]);

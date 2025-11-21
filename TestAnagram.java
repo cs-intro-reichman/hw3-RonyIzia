@@ -1,7 +1,7 @@
 public class TestAnagram {
     private static int totalTests = 0;
     private static int passedTests = 0;
-
+    
     public static void main(String[] args) {
         testIsAnagram();
         testPreProcess();
